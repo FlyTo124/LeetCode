@@ -1,5 +1,9 @@
 package easy;
 
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+
 public class Solution17 {
 
     public int climbStairs(int n) {
@@ -27,9 +31,30 @@ public class Solution17 {
     }
 
     //计算组合
-    //TODO 计算超过int最大值
     public int calculateCombination(int num1, int num2) {
-        return 1;
+        int result = 1;
+        int num3 = num1 - num2;
+        int length = num3 > num2 ? num2 : num3;
+        List<Integer> list = new LinkedList<>();
+        while (length > 0) {
+            result *= num1;
+            Iterator<Integer> it = list.iterator();
+            while (it.hasNext()){
+                int x = it.next();
+                if (result % x == 0){
+                    result /= x;
+                    it.remove();
+                }
+            }
+            if (result % length == 0) {
+                result /= length;
+            }else {
+               list.add(length);
+            }
+            num1--;
+            length--;
+        }
+        return result;
     }
 
     public static void main(String[] args) {
