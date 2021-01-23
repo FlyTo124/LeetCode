@@ -11,6 +11,7 @@ public class Solution02 {
         System.out.println(main.longestPalindrome(s));
         sc.close();
     }
+    Scanner in = new Scanner(System.in);
 
     public int longestPalindrome(String s) {
         int length = s.length(),
@@ -39,3 +40,4 @@ public class Solution02 {
     }
 
 }
+
