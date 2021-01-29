@@ -1,10 +1,9 @@
 package huawei;
 
 import java.util.Locale;
-import java.util.Scanner;
 
 // 简单密码
-public class Main {
+public class Solution07 {
 
     private int getNumByLowerLetter(char c) {
         String ch = String.valueOf(c);
@@ -38,20 +37,18 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String str = sc.nextLine();
+        String test = "YUANzhi1987";
         StringBuilder sb = new StringBuilder();
-        Main main = new Main();
-        char[] chars  = str.toCharArray();
+        Solution07 solution07 = new Solution07();
+        char[] chars  = test.toCharArray();
         for (char ch : chars){
             if (Character.isLowerCase(ch))
-                sb.append(main.getNumByLowerLetter(ch));
+                sb.append(solution07.getNumByLowerLetter(ch));
             else if (Character.isUpperCase(ch))
-                sb.append(main.getLowerByUpperLetter(ch));
+                sb.append(solution07.getLowerByUpperLetter(ch));
             else
                 sb.append(ch);
         }
         System.out.println(sb.toString().toLowerCase(Locale.ROOT));
-        sc.close();
     }
 }

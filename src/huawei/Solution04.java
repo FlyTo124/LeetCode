@@ -115,9 +115,9 @@ public class Solution04 {
             String[] strings = str.split("~");
             String ip = strings[0];
             String mask = strings[1];
-            main.setValue(ip);
+           //.. main.setValue(ip);
         }
-        main.getResult();
+      //  main.getResult();
     }
 }
 
