@@ -1,23 +1,15 @@
 package huawei;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 // 删除字符串中出现次数最少的字符
-public class Main {
+public class Solution09 {
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        Main main = new Main();
-        while (in.hasNextLine()){
-            String str = in.nextLine();
-            if (str.isEmpty())
-                break;
-            main.deleteMinChar(str);
-        }
-        in.close();
-    }
-
-    private void deleteMinChar(String str){
+        String str = "aabcddd";
         Map<Character, Integer> map = new LinkedHashMap<>();
         for (char ch : str.toCharArray()) {
             map.merge(ch, 1, Integer::sum);
