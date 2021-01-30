@@ -2,10 +2,8 @@ package huawei;
 
 import java.util.*;
 
-public class Main {
-
-    public Main() {
-    }
+// 字符串排序
+public class Solution10 {
 
     public String sort(String str) {
         // 先将英文字母收集起来
