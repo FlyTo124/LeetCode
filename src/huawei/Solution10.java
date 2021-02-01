@@ -1,6 +1,9 @@
 package huawei;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Scanner;
 
 // 字符串排序
 public class Solution10 {
@@ -38,8 +41,8 @@ public class Solution10 {
         Scanner in = new Scanner(System.in);
         while (in.hasNextLine()) {
             String str = in.nextLine();
-            String res = solution.sort(str);
-            System.out.println(res);
+            // String res = solution.sort(str);
+            // System.out.println(res);
         }
     }
 }
