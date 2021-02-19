@@ -16,7 +16,7 @@ public class Solution20 {
     }
 
     public void backtrack(int[] nums, LinkedList<Integer> track, int start) {
-        res.add(track);
+        res.add(new LinkedList<>(track));
         for (int i = start; i < nums.length; i++) {
             track.add(nums[i]);
             backtrack(nums, track, i + 1);
@@ -26,7 +26,7 @@ public class Solution20 {
 
     public static void main(String[] args) {
         Solution20 solution20 = new Solution20();
-        int[] nums = new int[]{1, 2};
+        int[] nums = new int[]{1, 2, 3};
         List<List<Integer>> res = solution20.subsets(nums);
         System.out.println(res.size());
     }
