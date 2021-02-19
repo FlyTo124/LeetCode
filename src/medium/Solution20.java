@@ -26,7 +26,7 @@ public class Solution20 {
 
     public static void main(String[] args) {
         Solution20 solution20 = new Solution20();
-        int[] nums = new int[]{1, 2, 3};
+        int[] nums = new int[]{186, 186, 150, 200, 160, 130, 197, 200};
         List<List<Integer>> res = solution20.subsets(nums);
         System.out.println(res.size());
     }
